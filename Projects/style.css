@@ -1,0 +1,206 @@
+body {
+    background-color: #F3F4F6;
+    color: #0F0F11;
+    font-family: Arial, sans-serif;
+    margin: 0;                       /* on enlève l'espace par défaut autour de la page */
+}
+
+
+header {
+    background-color: #7C3AED;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 5px 0 0 0; /* un petit espace au-dessus seulement */
+    font-size: 16px;
+}
+
+
+/* Le contenu principal au centre */
+main {
+    max-width: 600px;
+    margin: 20px auto; /* centré horizontalement, avec 20px en haut/bas */
+    padding: 10px;
+}
+
+/* Les "boîtes" blanches (formulaire et liste) */
+.boite {
+    background-color: white;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 4px #7C3AED;
+}
+
+.boite h2 {
+    margin-top: 0;
+    color: #7C3AED;
+}
+
+/* Le formulaire : on met les éléments les uns en dessous des autres */
+form {
+    display: flex;
+    flex-direction: column; /* les éléments seront empilés verticalement */
+}
+
+/* Classe ajoutée par JavaScript quand le titre est vide */
+.erreur {
+    border: 2px solid red !important;
+    outline: none;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Les champs de saisie (titre, description, date) */
+input, textarea {
+    border: 1px solid #E5E5E5;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+textarea {
+    height: 60px;
+    resize: vertical;  /* on peut agrandir verticalement seulement */
+}
+
+/* Quand l'utilisateur clique dans un champ, on change la couleur de la bordure */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #7C3AED;
+}
+
+/* Le bouton "Ajouter une tâche" et tous les boutons par défaut */
+button {
+    background-color: #7C3AED;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #6D28D9;
+}
+
+
+/* La liste des tâches */
+ul {
+    list-style: none;  /* on enlève les petits points devant les <li> */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #F9FAFB;
+    border: 1px solid #E5E5E5;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease; /* rend les changements de couleur fluides */
+}
+
+li strong {
+    color: #0F0F11;
+    font-size: 16px;
+}
+
+/* Petit texte gris pour la description et la date */
+li p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #374151;
+}
+
+.date-tache {
+    color: #6B7280;
+    font-size: 13px;
+    font-style: italic;
+}
+
+
+/* Bouton "Modifier" en orange */
+.btn-modifier {
+    background-color: #F59E0B;
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.btn-modifier:hover {
+    background-color: #D97706;
+}
+
+/* Bouton "Supprimer" en rouge */
+.btn-delete {
+    background-color: #EF4444;
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.btn-delete:hover {
+    background-color: #DC2626;
+}
+
+
+#triTaches {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #E5E5E5;
+    font-size: 14px;
+}
+
+/* Style du menu déroulant de statut (à faire / en cours / terminée) */
+.select-statut {
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #6B7280;
+    font-size: 14px;
+}
+
+
+.statut-a-faire {
+    border-left: 5px solid #ff0000;
+}
+
+.statut-en-cours {
+    border-left: 5px solid #3B82F6;
+}
+
+.statut-terminee {
+    border-left: 5px solid #10B981;
+    text-decoration: line-through; 
+    opacity: 0.6;                
+}

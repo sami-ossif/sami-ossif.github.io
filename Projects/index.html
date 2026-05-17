@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Gestionnaire de Tâches</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Gestionnaire de tâches</h1>
+        <p>Organise ta journée facilement</p>
+    </header>
+    
+    <main>
+
+        <!-- BOÎTE 1 : Le formulaire pour ajouter une tâche -->
+        <section class="boite">
+            <h2>Ajouter une tâche</h2>
+
+            <form id="taskForm">
+
+                <!-- Champ pour le TITRE de la tâche (obligatoire) -->
+                <label for="titreTache">Titre</label>
+                <input type="text" id="titreTache" placeholder="Ex : Faire les courses" required>
+
+                <!-- Champ pour la DESCRIPTION de la tâche -->
+                <label for="taskDesc">Description</label>
+                <textarea id="taskDesc" placeholder="Ex : Acheter du pain et du lait"></textarea>
+
+                <!-- Champ pour la DATE LIMITE-->
+                <label for="dateTache">Date limite</label>
+                <input type="date" id="dateTache">
+
+                <!-- Le bouton qui ajoutera la tâche-->
+                <button type="button" id="ajouterTache">Ajouter une tâche</button>
+            </form>
+        </section>
+
+        <!-- BOÎTE 2 : La liste des tâches -->
+        <section class="boite">
+            <h2>Mes tâches</h2>
+
+            <!-- Petit menu pour choisir comment on veut trier les tâches -->
+            <label for="triTaches">Trier par :</label>
+            <select id="triTaches">
+                <option value="titre">Titre (A → Z)</option>
+                <option value="date">Date limite</option>
+                <option value="statut">Statut</option>
+            </select>
+
+            <!-- La liste vide. Le JavaScript ajoutera les <li> à l'intérieur. -->
+            <ul id="listeTaches"></ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projet JavaScript - 2026</p>
+    </footer>
+
+</body>
+
+</html>
