@@ -1,11 +1,4 @@
-/* ===================================
-   Portfolio Sami OSSIF — script.js
-   =================================== */
-
-
-// =====================================
 // 1. Menu burger (responsive mobile)
-// =====================================
 const burger = document.getElementById("navBurger");
 const navLinks = document.getElementById("navLinks");
 
@@ -22,9 +15,8 @@ for (let i = 0; i < allLinks.length; i++) {
 }
 
 
-// =====================================
 // 2. Effet "machine à écrire" sur le hero
-// =====================================
+
 const roles = [
     "intégrateur web",
     "passionné de cyber",
@@ -66,7 +58,6 @@ function type() {
         }
     }
 
-    // Vitesse différente selon écriture / effacement
     let vitesse = 90;
     if (isDeleting === true) vitesse = 40;
     setTimeout(type, vitesse);
@@ -76,9 +67,8 @@ function type() {
 type();
 
 
-// =====================================
 // 3. Animation à l'apparition (au scroll)
-// =====================================
+
 const sections = document.querySelectorAll(".section");
 const cards = document.querySelectorAll(".skill-card, .project-card");
 
@@ -112,9 +102,8 @@ style.textContent = `
 document.head.appendChild(style);
 
 
-// =====================================
 // 4. Highlight du lien actif dans la nav
-// =====================================
+
 const navItems = document.querySelectorAll(".nav-links a");
 const allSections = document.querySelectorAll("section[id]");
 
