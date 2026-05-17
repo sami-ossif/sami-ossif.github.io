@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Sami OSSIF — étudiant développeur web au Cnam. Stage juin-juillet 2026.">
+    <title>Sami OSSIF — Étudiant développeur web</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- =========== NAVIGATION =========== -->
+    <nav class="nav">
+        <a href="#" class="nav-logo">SO<span class="accent">.</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- =========== HERO =========== -->
+    <header class="hero">
+        <div class="container">
+            <p class="terminal-prompt">&gt; <span class="terminal-cmd">whoami</span></p>
+            <h1 class="hero-name">Sami <span class="accent">OSSIF</span></h1>
+            <p class="hero-role">
+                <span class="role-fixed">Étudiant développeur web</span>
+                <span class="role-sep">·</span>
+                <span class="role-typed" id="typed"></span><span class="cursor">_</span>
+            </p>
+            <p class="hero-bio">
+                Je transforme des maquettes en pages web propres, responsives et accessibles.
+                Curieux de tout ce qui touche au code et à la sécurité informatique.
+                <strong>Je recherche un stage du 8 juin au 31 juillet 2026.</strong>
+            </p>
+            <div class="hero-ctas">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-ghost">Me contacter</a>
+            </div>
+            <div class="hero-scroll" aria-hidden="true">
+                <span>scroll</span>
+                <span class="arrow">↓</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========== À PROPOS =========== -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="num">01</span> À propos</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="lead">
+                        Étudiant en première année au <strong>Conservatoire national des arts et métiers (Cnam)</strong>,
+                        en DSP Intégration web et Bachelor 1 Informatique & Numérique.
+                    </p>
+                    <p>
+                        Je suis arrivé au Cnam avec une certitude : je voulais travailler dans
+                        l'informatique. Au fil de l'année, j'ai découvert que ce qui m'anime vraiment,
+                        c'est de <strong>comprendre comment les choses fonctionnent</strong> — qu'il
+                        s'agisse d'intégrer une maquette en HTML/CSS ou de décortiquer un système
+                        en pentest.
+                    </p>
+                    <p>
+                        Aujourd'hui, je cherche un premier stage qui me permette de
+                        confronter ce que j'apprends à un environnement professionnel réel.
+                        Ensuite, cap sur le <strong>DEUST IOSI</strong> en apprentissage, puis
+                        à plus long terme un cursus orienté cybersécurité.
+                    </p>
+                </div>
+                <aside class="about-card">
+                    <p class="card-label">&gt; status --current</p>
+                    <ul class="status-list">
+                        <li><span class="status-key">Formation</span><span class="status-val">DSP Intégration web · Cnam</span></li>
+                        <li><span class="status-key">Année</span><span class="status-val">BAC+1 · 2025–2026</span></li>
+                        <li><span class="status-key">Recherche</span><span class="status-val">Stage 8 juin → 31 juillet 2026</span></li>
+                        <li><span class="status-key">Localisation</span><span class="status-val">Colombes (92) · Île-de-France</span></li>
+                        <li><span class="status-key">Mobilité</span><span class="status-val">Paris &amp; petite couronne</span></li>
+                        <li><span class="status-key">Disponibilité</span><span class="status-val">Temps plein, présentiel</span></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========== COMPÉTENCES =========== -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="num">02</span> Compétences</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-icon">&lt;/&gt;</div>
+                    <h3>Front-end</h3>
+                    <ul class="skill-tags">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Responsive</li>
+                        <li>Accessibilité</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">{ }</div>
+                    <h3>Back-end</h3>
+                    <ul class="skill-tags">
+                        <li>PHP</li>
+                        <li>SQL</li>
+                        <li>Bases de données</li>
+                        <li>Python</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">⚙</div>
+                    <h3>Outils &amp; méthodes</h3>
+                    <ul class="skill-tags">
+                        <li>Git</li>
+                        <li>VS Code</li>
+                        <li>CMS</li>
+                        <li>Linux</li>
+                        <li>Pair programming</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">⌘</div>
+                    <h3>Cybersécurité (en cours)</h3>
+                    <ul class="skill-tags">
+                        <li>Réseau TCP/IP</li>
+                        <li>Nmap</li>
+                        <li>Wireshark</li>
+                        <li>Burp Suite</li>
+                        <li>TryHackMe</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">Aa</div>
+                    <h3>Langues</h3>
+                    <ul class="skill-tags">
+                        <li>Français — natif</li>
+                        <li>Anglais — technique</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">★</div>
+                    <h3>Qualités</h3>
+                    <ul class="skill-tags">
+                        <li>Rigueur</li>
+                        <li>Curiosité</li>
+                        <li>Travail d'équipe</li>
+                        <li>Auto-apprentissage</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========== PROJETS =========== -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="num">03</span> Projets</h2>
+            <p class="section-intro">
+                Des projets réalisés dans le cadre de ma formation ou par curiosité personnelle.
+                Le code source est consultable et les démos sont en ligne.
+            </p>
+
+            <div class="projects-grid">
+
+                <!-- Projet 1 : Gestionnaire de tâches -->
+                <article class="project-card featured">
+                    <div class="project-mockup">
+                        <div class="mockup-bar">
+                            <span></span><span></span><span></span>
+                            <em>gestionnaire-de-taches.app</em>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="mockup-header">Gestionnaire de tâches</div>
+                            <div class="mockup-form">
+                                <div class="mockup-input">Faire les courses</div>
+                                <div class="mockup-input">Acheter du pain et du lait</div>
+                                <button class="mockup-btn">Ajouter une tâche</button>
+                            </div>
+                            <div class="mockup-list">
+                                <div class="mockup-item done">Réviser HTML</div>
+                                <div class="mockup-item progress">Coder le portfolio</div>
+                                <div class="mockup-item todo">Envoyer candidatures</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-meta">Projet JavaScript · 2026</p>
+                        <h3>Gestionnaire de tâches</h3>
+                        <p class="project-desc">
+                            Application web pour gérer une to-do list avec sauvegarde automatique
+                            dans le navigateur. Tri dynamique, modification, suppression, gestion
+                            des statuts (à faire / en cours / terminée).
+                        </p>
+                        <ul class="project-tech">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>localStorage</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="projects/gestionnaire-taches/index.html" target="_blank" rel="noopener" class="btn btn-small">Voir la démo →</a>
+                            <a href="https://github.com/[VOTRE_PSEUDO]" target="_blank" rel="noopener" class="btn btn-small btn-ghost">Code source</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 2 : Le portfolio lui-même -->
+                <article class="project-card">
+                    <div class="project-mockup mockup-portfolio">
+                        <div class="mockup-bar">
+                            <span></span><span></span><span></span>
+                            <em>samiossif.github.io</em>
+                        </div>
+                        <div class="mockup-content mockup-dark">
+                            <div class="mockup-hero">
+                                <p class="mockup-prompt">&gt; whoami</p>
+                                <p class="mockup-name">Sami <span>OSSIF</span></p>
+                                <p class="mockup-tag">Développeur web</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-meta">Site personnel · 2026</p>
+                        <h3>Ce portfolio</h3>
+                        <p class="project-desc">
+                            Site one-page entièrement codé à la main en HTML/CSS/JS pur,
+                            sans framework. Design responsive, animations légères,
+                            optimisé pour la lecture mobile.
+                        </p>
+                        <ul class="project-tech">
+                            <li>HTML5</li>
+                            <li>CSS3 (Flex/Grid)</li>
+                            <li>JavaScript vanilla</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">Vous y êtes ↑</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 3 : Placeholder -->
+                <article class="project-card project-soon">
+                    <div class="project-placeholder">
+                        <span class="placeholder-icon">+</span>
+                        <p>Projet en cours</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-meta">Bientôt</p>
+                        <h3>À venir</h3>
+                        <p class="project-desc">
+                            Plus de projets seront ajoutés au fur et à mesure de ma formation
+                            au Cnam — notamment des projets PHP, et un mini-site avec base de données.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========== CONTACT =========== -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="num">04</span> Contact</h2>
+            <div class="contact-wrapper">
+                <div class="contact-text">
+                    <p class="lead">Envie d'échanger ?</p>
+                    <p>
+                        Je suis activement à la recherche d'un stage de deux mois
+                        (du 8 juin au 31 juillet 2026) en intégration / développement web,
+                        idéalement à Paris ou en petite couronne. N'hésitez pas à me contacter,
+                        je réponds rapidement.
+                    </p>
+                </div>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:smossif31128@gmail.com">smossif31128@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">Téléphone</span>
+                        <a href="tel:+33624483915">06 24 48 39 15</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/[VOTRE_PSEUDO]" target="_blank" rel="noopener">À ajouter</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">GitHub</span>
+                        <a href="https://github.com/[VOTRE_PSEUDO]" target="_blank" rel="noopener">À ajouter</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">Localisation</span>
+                        <span>Colombes (92)</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-cta">
+                <a href="mailto:smossif31128@gmail.com?subject=Stage%20Int%C3%A9grateur%20Web%20-%20Sami%20OSSIF" class="btn btn-primary btn-large">M'envoyer un email →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========== FOOTER =========== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sami OSSIF · Codé à la main avec ♥ et beaucoup de café</p>
+            <p class="footer-credit">&gt; <span>build successful · powered by HTML, CSS &amp; JS</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
