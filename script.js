@@ -19,6 +19,7 @@ for (let i = 0; i < allLinks.length; i++) {
 
 const roles = [
     "intégrateur web",
+    "technicien systèmes et réseaux",
     "passionné de cyber",
     "auto-didacte",
     "étudiant au Cnam"
