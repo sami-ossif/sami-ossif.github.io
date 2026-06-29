@@ -1,4 +1,4 @@
-// 1. Menu burger (responsive mobile)
+
 const burger = document.getElementById("navBurger");
 const navLinks = document.getElementById("navLinks");
 
@@ -6,7 +6,7 @@ burger.addEventListener("click", function() {
     navLinks.classList.toggle("open");
 });
 
-// Refermer le menu quand on clique sur un lien
+
 const allLinks = navLinks.querySelectorAll("a");
 for (let i = 0; i < allLinks.length; i++) {
     allLinks[i].addEventListener("click", function() {
@@ -15,7 +15,6 @@ for (let i = 0; i < allLinks.length; i++) {
 }
 
 
-// 2. Effet "machine à écrire" sur le hero
 
 const roles = [
     "intégrateur web",
@@ -34,12 +33,12 @@ function type() {
     const currentRole = roles[roleIndex];
 
     if (isDeleting === false) {
-        // On ajoute une lettre
+        
         typed.textContent = currentRole.substring(0, charIndex + 1);
         charIndex = charIndex + 1;
 
         if (charIndex === currentRole.length) {
-            // Mot complet : on attend puis on commence à effacer
+            
             isDeleting = true;
             setTimeout(type, 1800);
             return;
@@ -50,7 +49,7 @@ function type() {
         charIndex = charIndex - 1;
 
         if (charIndex === 0) {
-            // Mot effacé : on passe au suivant
+            
             isDeleting = false;
             roleIndex = roleIndex + 1;
             if (roleIndex >= roles.length) {
@@ -68,12 +67,12 @@ function type() {
 type();
 
 
-// 3. Animation à l'apparition (au scroll)
+
 
 const sections = document.querySelectorAll(".section");
 const cards = document.querySelectorAll(".skill-card, .project-card");
 
-// On utilise IntersectionObserver — moderne et performant
+
 const observer = new IntersectionObserver(function(entries) {
     for (let i = 0; i < entries.length; i++) {
         if (entries[i].isIntersecting === true) {
@@ -92,7 +91,7 @@ for (let i = 0; i < cards.length; i++) {
     observer.observe(cards[i]);
 }
 
-// Quand la carte devient visible
+
 const style = document.createElement("style");
 style.textContent = `
 .skill-card.visible, .project-card.visible {
@@ -103,7 +102,7 @@ style.textContent = `
 document.head.appendChild(style);
 
 
-// 4. Highlight du lien actif dans la nav
+
 
 const navItems = document.querySelectorAll(".nav-links a");
 const allSections = document.querySelectorAll("section[id]");
