@@ -1,3 +1,8 @@
+/* ===================================
+   Portfolio Sami OSSIF
+   Style : dark + accents néon (orange & teal)
+   =================================== */
+
 :root {
     --bg: #0F172A;
     --bg-alt: #1E293B;
@@ -7,8 +12,8 @@
     --text: #E5E7EB;
     --text-dim: #94A3B8;
     --text-muted: #64748B;
-    --accent: #14B8A6;        
-    --accent-2: #F97316;     
+    --accent: #14B8A6;        /* teal — couleur ikigai */
+    --accent-2: #F97316;      /* orange — couleur ikigai */
     --accent-soft: rgba(20, 184, 166, 0.12);
 
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -20,7 +25,7 @@
     --transition: 0.2s ease;
 }
 
-
+/* ===== Reset ===== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -596,6 +601,111 @@ a { color: inherit; text-decoration: none; }
     font-family: var(--font-mono);
     font-size: 11px;
     color: var(--text-dim);
+}
+
+/* Mockup jeu de combat (Pygame) */
+.mockup-game .mockup-content { padding: 0; overflow: hidden; }
+
+.mockup-arena {
+    background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%) !important;
+    color: #fff !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-hud {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px 12px 0;
+}
+
+.hud-side {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.hud-right { align-items: flex-end; text-align: right; }
+
+.hud-name {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #E2E8F0;
+}
+
+.hud-health {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.hud-health i {
+    display: block;
+    height: 100%;
+}
+
+.hud-right .hud-health i { margin-left: auto; }
+
+.hp-green { background: #22C55E; }
+.hp-red   { background: #EF4444; }
+
+.hud-ki {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: #93C5FD;
+}
+.hud-right .hud-ki { color: #C4B5FD; }
+
+.hud-vs {
+    font-weight: 800;
+    font-size: 14px;
+    color: #FACC15;
+    align-self: center;
+    padding-top: 2px;
+}
+
+.game-stage {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 20px 18px;
+    position: relative;
+}
+
+.fighter {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.fighter-blue   { background: linear-gradient(135deg, #F97316, #3B82F6); }
+.fighter-purple { background: linear-gradient(135deg, #7C3AED, #DB2777); }
+
+.blast {
+    width: 26px;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #FDE68A, #F59E0B);
+    box-shadow: 0 0 12px 2px rgba(245, 158, 11, 0.7);
+    align-self: center;
+    margin-bottom: 14px;
 }
 
 .project-body {

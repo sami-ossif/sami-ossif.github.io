@@ -1,0 +1,12 @@
+Combat physique
+Collision entre joueur 
+
+
+___
+
+Ecran d'acceuil:
+-selection de perso
+-Start/Game over
+Plus de perso
+Bloquer
+Spe
