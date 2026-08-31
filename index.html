@@ -315,19 +315,45 @@
                     </div>
                 </article>
 
-                <!-- Projet 4 : Placeholder -->
-                <article class="project-card project-soon">
-                    <div class="project-placeholder">
-                        <span class="placeholder-icon">+</span>
-                        <p>Projet en cours</p>
+                <!-- Projet 4 : SysWatch (outil systèmes & réseaux) -->
+                <article class="project-card featured">
+                    <div class="project-mockup mockup-terminal">
+                        <div class="mockup-bar">
+                            <span></span><span></span><span></span>
+                            <em>syswatch — check</em>
+                        </div>
+                        <div class="mockup-content">
+                            <p class="term-cmd"><span class="term-dollar">$</span>python syswatch.py check services.json</p>
+                            <p class="term-head">ETAT   SERVICE            LATENCE</p>
+                            <p class="term-rule">--------------------------------</p>
+                            <p class="term-line"><span class="term-up">UP</span>&nbsp;&nbsp;&nbsp;<span class="term-name">Google DNS</span><span class="term-lat">24.4 ms</span></p>
+                            <p class="term-line"><span class="term-up">UP</span>&nbsp;&nbsp;&nbsp;<span class="term-name">GitHub</span><span class="term-lat">41.3 ms</span></p>
+                            <p class="term-line"><span class="term-up">UP</span>&nbsp;&nbsp;&nbsp;<span class="term-name">Serveur SQL</span><span class="term-lat">2.1 ms</span></p>
+                            <p class="term-line"><span class="term-down">DOWN</span>&nbsp;<span class="term-name">API interne</span><span class="term-lat">-</span></p>
+                        </div>
                     </div>
                     <div class="project-body">
-                        <p class="project-meta">Bientôt</p>
-                        <h3>À venir</h3>
+                        <p class="project-meta">Projet Python · Systèmes &amp; réseaux · 2026</p>
+                        <h3>SysWatch — moniteur réseau &amp; système</h3>
                         <p class="project-desc">
-                            Plus de projets seront ajoutés au fur et à mesure de ma formation
-                            au Cnam — notamment des projets PHP, et un mini-site avec base de données.
+                            Outil d'administration en ligne de commande, écrit en Python pur
+                            (bibliothèque standard uniquement, zéro dépendance). Scanner de
+                            ports TCP parallélisé, vérification de disponibilité de services,
+                            supervision continue avec journal des changements d'état et suivi
+                            de l'espace disque. Sortie JSON et codes de sortie exploitables
+                            en CI / cron. Couvert par des tests unitaires.
                         </p>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>Sockets TCP</li>
+                            <li>Threads</li>
+                            <li>argparse</li>
+                            <li>unittest</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="Projet_Monitoring/syswatch.py" target="_blank" rel="noopener" class="btn btn-small">Voir le code →</a>
+                            <a href="Projet_Monitoring/README.md" target="_blank" rel="noopener" class="btn btn-small btn-ghost">Documentation</a>
+                        </div>
                     </div>
                 </article>
 

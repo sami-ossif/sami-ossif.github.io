@@ -603,6 +603,26 @@ a { color: inherit; text-decoration: none; }
     color: var(--text-dim);
 }
 
+/* Mockup terminal (SysWatch) */
+.mockup-terminal .mockup-content {
+    background: #0B1120;
+    color: #E5E7EB;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.7;
+    padding: 12px 14px;
+}
+
+.term-cmd { color: #14B8A6; margin-bottom: 8px; }
+.term-cmd .term-dollar { color: #64748B; margin-right: 6px; }
+.term-head { color: #64748B; }
+.term-rule { color: #334155; letter-spacing: -1px; }
+.term-line { display: flex; gap: 8px; white-space: pre; }
+.term-up { color: #10B981; font-weight: 600; }
+.term-down { color: #EF4444; font-weight: 600; }
+.term-name { color: #E5E7EB; }
+.term-lat { color: #94A3B8; margin-left: auto; }
+
 /* Mockup jeu de combat (Pygame) */
 .mockup-game .mockup-content { padding: 0; overflow: hidden; }
 
