@@ -1,27 +1,27 @@
 /* ===================================
    Portfolio Sami OSSIF
-   Style : dark + accents néon (orange & teal)
+   Style : clair & vibrant (teal → bleu + orange)
    =================================== */
 
 :root {
-    --bg: #0F172A;
-    --bg-alt: #1E293B;
-    --bg-card: #1E293B;
-    --bg-card-hover: #273449;
-    --border: #334155;
-    --text: #E5E7EB;
-    --text-dim: #94A3B8;
-    --text-muted: #64748B;
-    --accent: #14B8A6;        /* teal — couleur ikigai */
+    --bg: #F7FAFC;
+    --bg-alt: #EAF2F9;
+    --bg-card: #FFFFFF;
+    --bg-card-hover: #F1F6FB;
+    --border: #DCE7F1;
+    --text: #12294A;
+    --text-dim: #45586F;
+    --text-muted: #6A7C93;
+    --accent: #0E9AA7;        /* teal — couleur ikigai */
     --accent-2: #F97316;      /* orange — couleur ikigai */
-    --accent-soft: rgba(20, 184, 166, 0.12);
+    --accent-soft: rgba(14, 154, 167, 0.12);
 
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
 
     --radius: 12px;
     --radius-sm: 8px;
-    --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    --shadow: 0 10px 30px rgba(18, 41, 74, 0.10);
     --transition: 0.2s ease;
 }
 
@@ -66,7 +66,7 @@ a { color: inherit; text-decoration: none; }
     justify-content: space-between;
     align-items: center;
     padding: 16px 32px;
-    background: rgba(15, 23, 42, 0.85);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
 }
@@ -132,16 +132,18 @@ a { color: inherit; text-decoration: none; }
     padding: 120px 0 80px;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(160deg, #12B4A6 0%, #1E86C9 100%);
+    color: #eef6ff;
 }
 
 .hero::before {
     content: '';
     position: absolute;
-    top: 20%;
-    right: -100px;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+    top: 15%;
+    right: -120px;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.20) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -953,3 +955,21 @@ a { color: inherit; text-decoration: none; }
         gap: 4px;
     }
 }
+
+/* ===== Hero clair & vibrant : surcharges texte/boutons sur le dégradé ===== */
+.hero .terminal-prompt { color: rgba(255, 255, 255, 0.85); }
+.hero .terminal-cmd { color: #FFD24A; }
+.hero .hero-name { color: #ffffff; }
+.hero .hero-name .accent { color: #FFD24A; }
+.hero .hero-role { color: #DCEFFF; }
+.hero .role-fixed { color: #ffffff; }
+.hero .role-sep { color: rgba(255, 255, 255, 0.6); }
+.hero .role-typed { color: #FFD24A; }
+.hero .cursor { color: #FFD24A; }
+.hero .hero-bio { color: #EAF4FF; }
+.hero .hero-bio strong { color: #ffffff; background: rgba(255, 255, 255, 0.18); }
+.hero .hero-scroll { color: rgba(255, 255, 255, 0.8); }
+.hero .btn-primary { background: #ffffff; color: #12294A; }
+.hero .btn-primary:hover { background: #FFD24A; color: #12294A; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18); }
+.hero .btn-ghost { color: #ffffff; border-color: rgba(255, 255, 255, 0.6); }
+.hero .btn-ghost:hover { border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.12); }
